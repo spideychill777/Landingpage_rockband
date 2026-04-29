@@ -111,7 +111,6 @@ h1, h2, h3 {
 
 .hero-section {
 
-color: whitesmoke;
 text-align: center;
 background-image: url("../img/img-10.jpg");
 background-size: cover;
@@ -130,12 +129,14 @@ font-family: var(--typo-font);
     padding-bottom: 1rem;
 }
 
-.hero__overlay a{
+.hero__overlay .btn{
     background-color: var(--redwine-color);
     padding: .5rem;
 }
-.hero__overlay h2{
+.hero__overlay h2, .hero__overlay p{
     margin-bottom: 0;
+    background-color: var(--grey-color);
+    border-radius: 30%;
 }
 .events_container{
     background-color: var(--darkgrey-color);
