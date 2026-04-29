@@ -12,10 +12,14 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container header__content">
-            <h1 class="logo">Shattered Riffs</h1>
-
             <!-- Nav for desktop / hamburger for mobile -->
             <nav class="nav">
+                <div class="nav_logo">
+                    <h1>Shattered Riffs Riffs</h1>
+                    <img src="assets/icons/logo.ico" alt="logo band">
+                </div>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">&#9776;</label>
                 <ul class="nav__list">
                     <li><a href="#events">Events</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,15 +28,13 @@
                 </ul>
             </nav>
 
-            <!-- Hint for JS (optional extra points) -->
-            <button class="menu-toggle">☰</button>
         </div>
     </header>
 
     <main>
 
         <!-- HERO -->
-        <section class="hero">
+        <section class="hero-section">
             <div class="hero__overlay">
                 <h2>Rock the Night</h2>
                 <p>Upcoming Tour</p>
@@ -41,7 +43,7 @@
         </section>
 
         <!-- EVENTS -->
-        <section id="events" class="events container">
+        <section id="events" class="events_container">
             <h2>Upcoming Events</h2>
 
             <!-- Extra points: table -->
@@ -59,26 +61,26 @@
                         <td>15 May</td>
                         <td>Madrid</td>
                         <td>Sala Sol</td>
-                        <td><button>Buy</button></td>
+                        <td><button>BUY NOW</button></td>
                     </tr>
                     <tr>
                         <td>18 May</td>
                         <td>Barcelona</td>
                         <td>Razzmatazz</td>
-                        <td><button>Buy</button></td>
+                        <td><button>BUY NOW</button></td>
                     </tr>
                     <tr>
                         <td>22 May</td>
                         <td>Valencia</td>
                         <td>Moon Club</td>
-                        <td><button>Buy</button></td>
+                        <td><button>BUY NOW</button></td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <!-- ABOUT -->
-        <section id="about" class="about container">
+        <section id="about" class="about_container">
             <h2>About the Band</h2>
 
             <div class="about__content">
@@ -102,16 +104,16 @@
         </section>
 
         <!-- MEDIA -->
-        <section id="media" class="media container">
+        <section id="media" class="media_container">
             <h2>Multimedia</h2>
-
+            <div class="media_content"></div>
             <div class="media__grid">
-                <img src="./assets/img/img-2.jpg" alt="">
-                <img src="./assets/img/img-3.jpg" alt="">
-                <img src="./assets/img/img-4.jpg" alt="">
-                <img src="./assets/img/img-5.jpg" alt="">
-                <img src="./assets/img/img-6.jpg" alt="">
-                <img src="./assets/img/img-7.jpg" alt="">
+                <img src="./assets/img/img-2.jpg" alt="imagen multimedia">
+                <img src="./assets/img/img-3.jpg" alt="imagen multimedia">
+                <img src="./assets/img/img-4.jpg" alt="imagen multimedia">
+                <img src="./assets/img/img-5.jpg" alt="imagen multimedia">
+                <img src="assets/img/img-6.jpg" alt="imagen multimedia">
+                <img src="./assets/img/img-7.jpg" alt="imagen multimedia">
             </div>
         </section>
 
@@ -124,9 +126,9 @@
 
             <!-- Another possible list -->
             <ul class="social">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Spotify</a></li>
-                <li><a href="#">YouTube</a></li>
+                <li>Instagram</li>
+                <li>Spotify</li>
+                <li>Youtube</li>
             </ul>
         </div>
     </footer>

@@ -1,3 +1,32 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+Salt&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+
+    --header-height: 3.5rem;
+    /*========== Colors ==========*/
+    --grey-color: hsl(0 2.3% 18.9%);
+    --darkgrey-color: hsl(0, 17%, 9%);
+    --blood-color: hsl(0 96.8% 18.9%);
+    --redwine-color: hsl(0 96.8% 31.1%);
+    --background-color: hsl(0, 4%, 5%);
+
+    /*========== Font and typography ==========*/
+    --typo-font: "Rock Salt";
+    --bigger-font-size: 1.75rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    /* =========Transcitions======== */
+    --transition: all .3s ease;
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-color)  var(--darkgrey-color);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +34,8 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #0b0b0f;
+    font-family: var(--typo-font);
+    background-color:  var(--background-color);
     color: #f5f5f5;
     line-height: 1.5;
 }
@@ -22,7 +51,7 @@ a {
 }
 
 main {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -35,31 +64,186 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
-
-/* Puedes usar esto si quieres centrar contenido */
-/* .container {
+.container {
     margin: 0 auto;
-} */
+}
 
+
+
+.logo{
+    width: 20%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: .3s;
+    padding-right: 2rem;
+}
+
+.nav_logo img{
+    width: 5rem;
+    z-index: 5;
+    position: absolute;
+}
+
+.nav_logo h1{
+    z-index: 10;
+    position: absolute;
+}
+.nav__list{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    text-align: right;
+    transition: var(--transition);
+
+}
+.nav__list  :hover{
+    column-gap: .5rem;
+    color: var(--redwine-color);
+    padding: auto;
+}
+
+#menu-toggle { display: none; } /* Ocultar checkbox */
+.hamburger { display: none; } /* Ocultar hamburguesa en escritorio */
+
+.hero-section {
+
+color: whitesmoke;
+text-align: center;
+background-image: url("../img/img-10.jpg");
+background-size: cover;
+background-position: center;
+height: 70dvh;
+width: 100%;
+font-family: var(--typo-font);
+}
+
+.hero__overlay{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+.hero__overlay a{
+    background-color: var(--redwine-color);
+    padding: .5rem;
+}
+.hero__overlay h2{
+    margin-bottom: 0;
+}
+.events_container{
+    background-color: var(--darkgrey-color);
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    td, th {
+    border: 1px solid var(--blood-color);
+    text-align: left;
+    padding: 8px;
+    }
+    tr:nth-child(even) {
+    background-color: var(--darkgrey-color);
+    }
+    }
+.events_container button{
+    font-weight: bold;
+    }
+
+.about_container{
+    background-color: var(--darkgrey-color);
+    flex-direction: row;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 60px;
+    border: 1px solid var(--primary-color);
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    gap:2rem;
+}
+.about_container h2{
+    text-align: center;
+}
+.about__content{
+    display: flex;
+    gap: 2rem;
+
+
+}
+.about__content h3{
+    color: var(--blood-color);
+}
+.about__content img{
+    width: 20rem;
+    height: 30rem;
+    align-items: center;
+    border: solid .3vh white;
+    padding-bottom: 5vh;
+    background-color: whitesmoke;
+    
+}
+.media_container{
+    text-align: center;
+}
+.media_content{
+    justify-content: space-around;
+}
+.media__grid{
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    grid-auto-rows: 200px;
+}
+.media__grid img{
+    border: 2px solid;
+    border-color: var(--blood-color);
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.footer__content{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 2px solid;
+    border-color: var(--blood-color);
+    background-color: var(--redwine-color);
+    align-items: space-around;
+    justify-content: space-around;
+}
 
 @media (max-width: 768px) {
-
-    body {
-        font-size: 14px;
+    .nav__list {
+        display: none; /* Hide mobile devices per default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Nav Height */
+        left: 0;
+        background-color: #333;
     }
-
-    main {
-        width: 95%;
+    #menu-toggle:checked ~ .nav__list {
+        display: flex; /* Show when clicking */
+        align-items: end;
+        padding-right: 2rem;
+        
     }
-
-    section {
-        margin: 2rem 0;
-    }
-
-    /* Hint clave */
-    /* piensa en:
-       - menús colapsables
-       - layouts en columna
-       - imágenes adaptativas
-    */
+    .hamburger { display: block; } /* Show hamburger menu */
 }
